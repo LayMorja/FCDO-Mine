@@ -15,12 +15,16 @@
    }
 }
 
-._icon-arrow-down:before {
-   content: '\e900';
-}
 ._icon-arrow-right:before {
    content: '\e901';
    color: #f7fcff;
+}
+._icon-arrow-left:before {
+   content: '\e907';
+   color: #f7fcff;
+}
+._icon-arrow-down:before {
+   content: '\e900';
 }
 ._icon-discord:before {
    content: '\e902';

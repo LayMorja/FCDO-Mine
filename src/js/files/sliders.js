@@ -37,7 +37,7 @@ function initSliders() {
 			observeParents: true,
 			slidesPerView: 3,
 			spaceBetween: 80,
-			autoHeight: true,
+			// autoHeight: true,
 			speed: 800,
 
 			//touchRatio: 0,
@@ -73,8 +73,8 @@ function initSliders() {
 
 			// Кнопки "влево/вправо"
 			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
+				prevEl: '.slide-mods__button-prev',
+				nextEl: '.slide-mods__button-next',
 			},
 
 			// Брейкпоинты
@@ -82,7 +82,11 @@ function initSliders() {
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
-					spaceBetween: 0,
+					spaceBetween: 10,
+				},
+            480: {
+					slidesPerView: 1.5,
+					spaceBetween: 10,
 				},
 				768: {
 					slidesPerView: 2,
@@ -90,8 +94,11 @@ function initSliders() {
 				},
 				992: {
 					slidesPerView: 3,
-					spaceBetween: 80,
+					spaceBetween: 60,
 				},
+            1700: {
+					spaceBetween: 80,
+            }
 			},
 			
 			// События
@@ -101,6 +108,7 @@ function initSliders() {
 		});
 	}
 }
+/*
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {
 	// Добавление классов слайдера
@@ -133,7 +141,7 @@ function initSlidersScroll() {
 		}
 	}
 }
-
+*/
 window.addEventListener("load", function (e) {
 	// Запуск инициализации слайдеров
 	initSliders();

@@ -12,25 +12,22 @@
       width: 100%;
       transition: all 0.3s ease;
       ._header-scroll & {
-         background-color: rgba(255, 255, 255, 0.6);
+         background-color: rgba(247, 252, 255, 0.5);
       }
-   }
-
-   &__container {
    }
 
    &__body {
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: rem(130);
+      min-height: rem(110);
       position: relative;
       transition: all 0.3s ease;
       @media (max-width: $tablet) {
-         min-height: rem(90);
+         min-height: rem(80);
       }
       ._header-scroll & {
-         min-height: rem(90);
+         min-height: rem(80);
          @media (max-width: $tablet) {
             min-height: rem(70);
          }
