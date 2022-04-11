@@ -1,0 +1,74 @@
+// Базовые стили спойлеров
+// Сниппет (HTML): spoller
+
+// Блок со спойлерами
+.spollers {
+   display: grid;
+   gap: rem(40);
+   position: relative;
+   width: 90%;
+   height: 100%;
+}
+// Спойлер
+.spollers__item {
+   font-size: rem(20);
+   background: rgba(239, 244, 251, 0.65);
+   box-shadow: 5px 6px 0px 6px rgba(129, 134, 142, 0.7);
+   @media (min-width: $mobile) {
+      width: 30%;
+      &_01 {
+         position: absolute;
+         top: 0;
+         left: 0;
+      }
+      &_02 {
+         position: absolute;
+         top: rem(50);
+         left: 50%;
+         transform: translateX(-50%);
+      }
+
+      &_03 {
+         position: absolute;
+         top: rem(100);
+         right: 0;
+      }
+   }
+}
+// Заголовок спойлера
+.spollers__title {
+   font-weight: 400;
+   font-size: rem(20);
+   line-height: math.div(24, 20);
+   color: #1c1c1c;
+   width: 100%;
+   cursor: default;
+   text-align: center;
+   padding: rem(8) rem(15);
+   display: inline-flex;
+   justify-content: center;
+   gap: 20%;
+   flex-direction: row-reverse;
+   align-items: center;
+   &::before {
+      transition: all 0.5s ease;
+      font-size: rem(30);
+   }
+   position: relative;
+   ._spoller-init & {
+      cursor: pointer;
+      &._spoller-active {
+         &::before {
+            transform: rotate(-180deg);
+         }
+      }
+   }
+}
+// Контент спойлера
+.spollers__body {
+   padding: rem(15) rem(20);
+   font-weight: 400;
+   font-size: rem(18);
+   line-height: math.div(20, 18);
+   color: #000000;
+}

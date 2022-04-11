@@ -1,0 +1,141 @@
+//====================================================================================================
+.fullscreen {
+   &__video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 2;
+      min-height: 100vh;
+   }
+   > section {
+   }
+}
+.main-block {
+   position: relative;
+   z-index: 5;
+   min-height: 100vh;
+   padding-top: rem(130);
+   text-align: center;
+   @media (max-width: $tablet) {
+      padding-top: rem(100);
+   }
+
+   &__body {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+   }
+
+   &__title {
+      font-weight: 700;
+      @include adaptiveValue('font-size', 36, 24);
+      line-height: math.div(48, 36);
+      text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+      &:not(:last-child) {
+         margin-bottom: em(40, 48);
+      }
+   }
+
+   &__subtitle {
+      font-weight: 700;
+      @include adaptiveValue('font-size', 24, 17);
+      line-height: math.div(28, 22);
+      text-align: center;
+      &:not(:last-child) {
+         margin-bottom: em(60, 24);
+      }
+      max-width: rem(820);
+   }
+
+   &__button {
+      &:not(:last-child) {
+         margin-bottom: rem(30);
+      }
+   }
+}
+
+//====================================================================================================
+.mods {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding-bottom: rem(50);
+   &_title {
+      &:not(:last-child) {
+         margin-bottom: em(60, 48);
+      }
+   }
+
+   &__container {
+   }
+
+   &__slider {
+   }
+
+   &__wrapper {
+   }
+
+   &__slide {
+   }
+
+   &__description {
+   }
+   &__button {
+      margin-top: rem(30);
+   }
+}
+.swiper {
+   max-width: 80%;
+   margin: 0 auto;
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.slide-mods {
+   background: rgba(72, 110, 57, 0.8);
+   display: flex;
+   flex-direction: column;
+   &__content {
+      padding: rem(20) rem(15);
+      text-align: center;
+   }
+   &__image-ibg {
+      padding-bottom: percent(240, 400);
+   }
+   &__title {
+      font-weight: 700;
+      @include adaptiveValue('font-size', 32, 20);
+      line-height: 130%;
+      color: #f7fcff;
+      &::after {
+         content: '';
+         display: block;
+         height: rem(2);
+         width: 0%;
+         background-color: #f7fcff;
+         transition: all 0.3s ease;
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            &::after {
+               width: 100%;
+            }
+         }
+      }
+   }
+   &__description {
+      margin-top: rem(8);
+   }
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
