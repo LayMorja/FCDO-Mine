@@ -2,6 +2,8 @@
 import { isMobile, removeClasses } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
+const video = document.querySelector('.fullscreen__video');
+
 
 window.onload = function () {
    const gallery = document.querySelector('.gallery__body');
@@ -48,9 +50,5 @@ window.onload = function () {
             gallery.classList.add('_init');
          }
       });
-   }   
-   
-   let iframeName = document.getElementById('iframe');
-   let iframeContent = iframeName.contentDocument;
-   iframeContent.body.innerHTML = iframeContent.body.innerHTML + '<style>.at-table-fix {display: block;} .cards-container {display: flex; flex-wrap: wrap; justify-content: center; flex-direction: column; width: 100%;}</style>';
+   }
 }

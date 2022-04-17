@@ -94,11 +94,8 @@ function initSliders() {
 				},
 				992: {
 					slidesPerView: 3,
-					spaceBetween: 60,
-				},
-            1700: {
-					spaceBetween: 80,
-            }
+					spaceBetween: 100,
+				}
 			},
 			
 			// События
